@@ -1,0 +1,94 @@
+/* container styling */
+.book-list {
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.book-list h2 {
+  margin-top: 0;
+  text-align: center;
+}
+
+.book-cards {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.book-card {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: calc(25% - 20px);
+  box-sizing: border-box;
+  position: relative; /* Make the card relatively positioned */
+  transition: all 0.2s ease-in-out;
+}
+
+.book-image {
+  width: 100%;
+}
+
+.book-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.book-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.book-info h3 {
+  margin: 5px 0;
+}
+
+.book-actions {
+  /* Removed from inside .book-info */
+  position: absolute; /* Position the actions absolutely within the card */
+  top: 5px; /* Adjust top and right positioning for desired placement */
+  right: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.book-actions button {
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.book-actions button:hover {
+  background-color: #ddd;
+}
+
+@media (max-width: 768px) {
+  .book-list {
+    width: 100%;
+  }
+
+  .book-cards {
+    flex-direction: column;
+  }
+
+  .book-card {
+    width: 100%;
+  }
+}
